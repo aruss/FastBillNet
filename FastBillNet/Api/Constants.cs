@@ -29,10 +29,10 @@ namespace FastBillNet
     {
         public const string Success = "success";
 
-        public static class YesNo
+        public enum YesNo : int
         {
-            public const int No = 0;
-            public const int Yes = 1;
+            No = 0,
+            Yes = 1
         }
 
         /// <summary>
@@ -106,22 +106,22 @@ namespace FastBillNet
             /// <summary>
             /// ohne title
             /// </summary>
-            public static string NoTitle = "";
+            public const string NoTitle = "";
 
             /// <summary>
             /// Familie
             /// </summary>
-            public static string Family = "family";
+            public const string Family = "family";
 
             /// <summary>
             /// Frau
             /// </summary>
-            public static string Mrs = "mrs";
+            public const string Mrs = "mrs";
 
             /// <summary>
             /// Herr
             /// </summary>
-            public static string Mr = "mr";
+            public const string Mr = "mr";
 
         }
 

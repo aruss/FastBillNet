@@ -23,8 +23,10 @@
 
 #endregion
 
+using FastBillNet.Converter;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
+using static FastBillNet.Constants;
 
 namespace FastBillNet
 {
@@ -235,7 +237,7 @@ namespace FastBillNet
         /// Zahlungshinweis auf Rechnung anzeigen: <see cref="Constants.YesNo"/>
         /// </summary>
         [JsonProperty("SHOW_PAYMENT_NOTICE")]
-        public string ShowPaymentNotice { get; set; }
+        public YesNo ShowPaymentNotice { get; set; }
 
         /// <summary>
         /// Kundentyp: <see cref="Constants.CustomerType"/> 
@@ -244,6 +246,7 @@ namespace FastBillNet
         public string CustomerType { get; set; }
 
         [JsonProperty("NEWSLETTER_OPTIN")]
+        [JsonConverter(typeof(BooleanConverter))]
         public bool NewsletterOptin { get; set; }
 
         [JsonProperty("AFFILIATE")]
@@ -314,6 +317,12 @@ namespace FastBillNet
 
         [JsonProperty("STATE")]
         public string State { get; set; }
+
+        /// <summary>
+        /// Lieferadresse
+        /// </summary>
+        [JsonProperty("SECONDARY_ADDRESS")]
+        public string SecondaryAddress { get; set; }
 
         /// <summary>
         /// Telefonnummer
