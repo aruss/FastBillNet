@@ -54,17 +54,17 @@ namespace FastBillNet
             /// <summary>
             /// Rechnungen
             /// </summary>
-            public static string Outgoing = "outgoing";
+            public const string Outgoing = "outgoing";
 
             /// <summary>
             /// Entwürfe
             /// </summary>
-            public static string Draft = "draft";
+            public const string Draft = "draft";
 
             /// <summary>
             /// Gutschriften
             /// </summary>
-            public static string Credit = "credit";
+            public const string Credit = "credit";
         }
 
         /// <summary>
@@ -75,17 +75,17 @@ namespace FastBillNet
             /// <summary>
             /// unbezahlt (inkl. überfällig) 
             /// </summary>
-            public static string Unpaid = "unpaid";
+            public const string Unpaid = "unpaid";
 
             /// <summary>
             /// bezahlt 
             /// </summary>
-            public static string Paid = "paid ";
+            public const string Paid = "paid ";
 
             /// <summary>
             /// überfällig
             /// </summary>
-            public static string Overdue = "overdue";
+            public const string Overdue = "overdue";
         }
 
         public static class CustomerType
@@ -93,12 +93,12 @@ namespace FastBillNet
             /// <summary>
             /// Geschäftskunde
             /// </summary>
-            public static string Business = "business";
+            public const string Business = "business";
 
             /// <summary>
             /// Privatperson
             /// </summary>
-            public static string Consumer = "consumer";
+            public const string Consumer = "consumer";
         }
 
         public class Salutation
@@ -130,37 +130,37 @@ namespace FastBillNet
             /// <summary>
             /// ueberweisung
             /// </summary>
-            public static int Transfer = 1;
+            public const int Transfer = 1;
 
             /// <summary>
             /// lastschrift
             /// </summary>
-            public static int Charge = 2;
+            public const int Charge = 2;
 
             /// <summary>
             /// bar
             /// </summary>
-            public static int Cash = 3;
+            public const int Cash = 3;
 
             /// <summary>
             /// paypal
             /// </summary>
-            public static int PayPal = 4;
+            public const int PayPal = 4;
 
             /// <summary>
             /// Vorkasse
             /// </summary>
-            public static int Prepayment = 5;
+            public const int Prepayment = 5;
 
             /// <summary>
             /// Kreditkarte
             /// </summary>
-            public static int CreditCard = 6;
+            public const int CreditCard = 6;
         }
 
         public class CountryCode
         {
-            public static string DE = "DE";
+            public const string DE = "DE";
         }
     }
 }
