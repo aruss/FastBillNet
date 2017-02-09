@@ -29,6 +29,7 @@ using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Net;
 
 namespace FastBillNet
 {
@@ -72,7 +73,7 @@ namespace FastBillNet
 
                 var result = c.SendAsync(req).Result;
                 var stringContent = result.Content.ReadAsStringAsync().Result;
-
+                stringContent = WebUtility.HtmlDecode(stringContent);
                 return JsonConvert.DeserializeObject<ApiResponse<TResponse>>(stringContent);
             }
         }

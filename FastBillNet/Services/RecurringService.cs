@@ -25,6 +25,7 @@
 
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
+using static FastBillNet.Constants;
 
 namespace FastBillNet
 {
@@ -177,7 +178,7 @@ namespace FastBillNet
         /// Flag, das angibt, ob alle bestehenden Rechnungsposten gelöscht werden sollen. <see cref="Constants.YesNo"/>
         /// </summary>
         [JsonProperty("DELETE_EXISTING_ITEMS")]
-        public bool DeleteExistingItems { get; set; }
+        public YesNo DeleteExistingItems { get; set; }
 
     }
 

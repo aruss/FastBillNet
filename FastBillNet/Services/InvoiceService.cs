@@ -25,6 +25,7 @@
 
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
+using static FastBillNet.Constants;
 
 // For reference: http://www.fastbill.com/api/ausgangsrechnungen.html 
 namespace FastBillNet
@@ -330,7 +331,7 @@ namespace FastBillNet
         /// Angabe, ob Empfangsbestätigung angefordert werden soll: <see cref="Constants.YesNo"/>
         /// </summary>
         [JsonProperty("RECEIPT_CONFIRMATION")]
-        public string ReceiptConfirmation { get; set; }
+        public YesNo ReceiptConfirmation { get; set; }
     }
 
     public class InvoiceSendByEmailResponse : ResponseBase
